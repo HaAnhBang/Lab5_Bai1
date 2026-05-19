@@ -1,16 +1,20 @@
 #ifndef NHANVIENVP_H
 #define NHANVIENVP_H
 
+#include "NhanVien.h"
 
-class NhanVienVP
+class NhanVienVP : public NhanVien
 {
-    public:
-        NhanVienVP();
-        virtual ~NhanVienVP();
+private:
+    int SoNgayLamViec;
 
-    protected:
+public:
+    NhanVienVP();
+    ~NhanVienVP();
 
-    private:
+    void Nhap();
+    void Xuat();
+    void TinhLuong();
 };
 
-#endif // NHANVIENVP_H
+#endif
