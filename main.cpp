@@ -1,6 +1,5 @@
-#include "NhanVien.h"
-#include <iostream>
-using namespace std;
+#include "NhanVienSX.h"
+#include "NhanVienVP.h"
 
 int main()
 {
@@ -15,8 +14,10 @@ int main()
     for (int i = 0; i < n; i++)
     {
         cout << "\nNhap nhan vien san xuat thu " << i + 1 << endl;
+
         a[i] = new NhanVienSX();
         a[i]->Nhap();
+
         cin.ignore();
     }
 
@@ -29,12 +30,15 @@ int main()
     for (int i = 0; i < m; i++)
     {
         cout << "\nNhap nhan vien van phong thu " << i + 1 << endl;
+
         b[i] = new NhanVienVP();
         b[i]->Nhap();
+
         cin.ignore();
     }
 
     cout << "\n===== DANH SACH NHAN VIEN SAN XUAT =====" << endl;
+
     for (int i = 0; i < n; i++)
     {
         cout << "\nNhan vien thu " << i + 1 << endl;
@@ -42,6 +46,7 @@ int main()
     }
 
     cout << "\n===== DANH SACH NHAN VIEN VAN PHONG =====" << endl;
+
     for (int i = 0; i < m; i++)
     {
         cout << "\nNhan vien thu " << i + 1 << endl;
@@ -56,7 +61,8 @@ int main()
     for (int i = 0; i < m; i++)
         TongLuong += b[i]->GetLuong();
 
-    cout << "\nTong luong cong ty phai tra: " << TongLuong << endl;
+    cout << "\nTong luong cong ty phai tra: "
+         << TongLuong << endl;
 
     cout << "\n===== NHAN VIEN SAN XUAT CO LUONG THAP NHAT =====" << endl;
 
