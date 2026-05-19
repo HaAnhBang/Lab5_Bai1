@@ -2,15 +2,20 @@
 #define NHANVIENSX_H
 
 #include "NhanVien.h"
+
 class NhanVienSX : public NhanVien
 {
-    public:
-        NhanVienSX();
-        virtual ~NhanVienSX();
+private:
+    int LuongCanBan;
+    int SoSanPham;
 
-    protected:
+public:
+    NhanVienSX();
+    ~NhanVienSX();
 
-    private:
+    void Nhap();
+    void Xuat();
+    void TinhLuong();
 };
 
-#endif // NHANVIENSX_H
+#endif
